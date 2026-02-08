@@ -4,7 +4,8 @@
 
 A personal digital media ecosystem for private music and video streaming. No tracking, no ads, no external dependencies — just your content, your way.
 
-[Live](https://dutatiberiu.github.io/lowkey/) | [Stream](https://dutatiberiu.github.io/lowKey-Stream/) | [Player](https://dutatiberiu.github.io/lowKey-Player/)
+ [Live](https://dutatiberiu.github.io/lowkey/) |
+ [Stream](https://dutatiberiu.github.io/lowKey-Stream/) | [Player](https://dutatiberiu.github.io/lowKey-Player/)
 
 ---
 
@@ -42,7 +43,6 @@ A web-based music player optimized for GitHub Pages with real-time audio visuali
 
 - Real-time audio visualizer (Web Audio API + Canvas) with multiple styles
 - Album/Artist/Songs organization with tabbed interface
-- Full playback controls — play, pause, next, previous, shuffle, repeat
 - Interactive progress bar with seek and timestamp display
 - Volume control with mute/unmute
 - Real-time search/filter in playlist
@@ -60,8 +60,18 @@ Both apps share a unified visual identity:
 - **Electric Lime** (`#c8ff00`) as the single accent color
 - **Zero external dependencies** — vanilla HTML, CSS, JavaScript
 - **Zero tracking** — no analytics, no CDNs, no third-party scripts
-- **Responsive** — works on desktop, tablet, and mobile
 - **Privacy-first** — designed to pass through corporate firewalls and content filters
+
+### Brand Colors
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| Void | `#0A0A0B` | Background |
+| Surface | `#111113` | Cards, panels |
+| Electric Lime | `#C8FF00` | Primary accent |
+| Chalk | `#E8E8EC` | Primary text |
+| Muted | `#6B6B76` | Secondary text |
+
 
 ### Tech Stack
 
@@ -73,16 +83,6 @@ Both apps share a unified visual identity:
 | Stream Backend | Python 3 (stdlib only) |
 | Stream Tunnel | Cloudflare Tunnel (free) |
 | Hosting | GitHub Pages |
-
-### Brand Colors
-
-| Token | Value | Usage |
-|-------|-------|-------|
-| Void | `#0A0A0B` | Background |
-| Surface | `#111113` | Cards, panels |
-| Electric Lime | `#C8FF00` | Primary accent |
-| Chalk | `#E8E8EC` | Primary text |
-| Muted | `#6B6B76` | Secondary text |
 
 ---
 
@@ -106,7 +106,7 @@ lowkey-player/             ← private repo
 └── Images/
 
 lowkey-stream/             ← private repo
-├── docs/                  (frontend — GitHub Pages)
+├── docs/                  
 │   ├── index.html
 │   ├── styles.css
 │   ├── app.js
@@ -120,7 +120,7 @@ lowkey-stream/             ← private repo
 
 ## License
 
-Personal project — free to use and modify.
+Personal project 
 
 ---
 
