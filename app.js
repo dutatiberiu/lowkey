@@ -1,6 +1,9 @@
-// Subtle parallax on mouse move
+// Subtle parallax on mouse move (desktop only)
 const cards = document.querySelectorAll('.card');
+const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+
 document.addEventListener('mousemove', (e) => {
+    if (isTouchDevice) return;
     const x = (e.clientX / window.innerWidth - 0.5) * 2;
     const y = (e.clientY / window.innerHeight - 0.5) * 2;
 

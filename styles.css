@@ -265,7 +265,47 @@ body {
 
 /* Responsive */
 @media (max-width: 640px) {
-    .cards { flex-direction: column; }
-    .card { width: 100%; max-width: 320px; height: 280px; }
-    .container { gap: 40px; }
+    .container {
+        gap: 30px;
+        padding: 20px;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+        max-width: 360px;
+        height: 260px;
+    }
+    .brand__tagline {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+    .glow {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        gap: 24px;
+        padding: 16px;
+    }
+    .card {
+        height: 240px;
+        gap: 14px;
+        border-radius: 12px;
+    }
+    .card__icon img {
+        height: 75px;
+    }
+    .card__desc {
+        padding: 0 16px;
+        font-size: 0.8rem;
+    }
+    .glow {
+        width: 240px;
+        height: 240px;
+    }
 }
