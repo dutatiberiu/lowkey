@@ -1,21 +1,21 @@
-// Subtle parallax on mouse move (desktop only)
 const cards = document.querySelectorAll('.card');
 const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
 
-document.addEventListener('mousemove', (e) => {
-    if (isTouchDevice) return;
-    const x = (e.clientX / window.innerWidth - 0.5) * 2;
-    const y = (e.clientY / window.innerHeight - 0.5) * 2;
-
-    cards.forEach((card, i) => {
-        const factor = (i === 0) ? 1 : -1;
-        card.style.transform = `translate(${x * 3 * factor}px, ${y * 3 * factor}px)`;
-    });
-});
-
-// Reset transform on mouse leave
-document.body.addEventListener('mouseleave', () => {
+if (!isTouchDevice) {
     cards.forEach(card => {
-        card.style.transform = '';
+        card.addEventListener('mousemove', e => {
+            const r  = card.getBoundingClientRect();
+            const cx = r.left + r.width  / 2;
+            const cy = r.top  + r.height / 2;
+            const dx = (e.clientX - cx) / (r.width  / 2);
+            const dy = (e.clientY - cy) / (r.height / 2);
+
+            card.style.transform =
+                `perspective(700px) rotateX(${-dy * 10}deg) rotateY(${dx * 10}deg) scale(1.02)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
     });
-});
+}

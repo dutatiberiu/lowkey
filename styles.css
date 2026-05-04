@@ -134,8 +134,10 @@ body {
     text-decoration: none;
     color: var(--text-primary);
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-    overflow: hidden;
+    transition: background 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.1s ease;
+    transform-style: preserve-3d;
     animation: slideUp 0.8s ease-out backwards;
 }
 
@@ -161,7 +163,6 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-8px);
     background: var(--bg-card-hover);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
@@ -184,6 +185,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    transform: translateZ(40px);
 }
 
 .card__icon img {
@@ -197,6 +199,7 @@ body {
     font-weight: 600;
     font-size: 1.4rem;
     letter-spacing: -0.5px;
+    transform: translateZ(25px);
 }
 
 .card__desc {
@@ -207,6 +210,7 @@ body {
     text-align: center;
     padding: 0 24px;
     line-height: 1.6;
+    transform: translateZ(15px);
 }
 
 .card__arrow {
